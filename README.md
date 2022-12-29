@@ -2,7 +2,7 @@ BrowseEverything (in Parcel)
 =================================
 
 ![npm](https://img.shields.io/npm/v/browse-everything)
-[![Build Status](https://circleci.com/gh/samvera/parcel-browse-everything.svg?style=svg)](https://circleci.com/gh/samvera/parcel-browse-everything)
+[![Build Status](https://circleci.com/gh/jrgriffiniii/parcel-browse-everything.svg?style=svg)](https://circleci.com/gh/jrgriffiniii/parcel-browse-everything)
 [![Contribution Guidelines](https://img.shields.io/badge/contributing-guidelines-blue.svg)](./CONTRIBUTING.md)
 [![Apache 2.0 License](https://img.shields.io/badge/apache2-license-blue.svg)](./LICENSE)
 
