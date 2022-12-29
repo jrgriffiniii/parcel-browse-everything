@@ -2,14 +2,18 @@ version: 2.1
 
 orbs:
   samvera: samvera/circleci-orb@1.0
+  node: circleci/node@5.0
 
 jobs:
   lint:
     parameters:
       project:
         type: string
+        default: browse-everything
       ruby_version:
         type: string
+
+    working_directory: ~/<< parameters.project >>
 
     executor:
       name: 'samvera/ruby'
@@ -29,13 +33,72 @@ jobs:
             [[ -z "$(git branch --all --list master */master)" ]]
       - samvera/cached_checkout
 
+  build:
+    parameters:
+      project:
+        type: string
+        default: browse-everything
+      node-version:
+        type: string
+
+    working_directory: ~/<< parameters.project >>
+
+    executor:
+      name: node/default
+      tag: << parameters.node-version >>
+
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/<< parameters.project >>
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          name: Build the package using Parcel
+          command: yarn build
+      - persist_to_workspace:
+          root: ~/<< parameters.project >>
+          paths: .
+
+  test:
+    parameters:
+      project:
+        type: string
+        default: browse-everything
+      node-version:
+        type: string
+
+    working_directory: ~/<< parameters.project >>
+
+    executor:
+      name: node/default
+      tag: << parameters.node-version >>
+
+    steps:
+      - attach_workspace:
+          at: ~/<< parameters.project >>
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          name: Execute the Jest test suites
+          command: yarn test
+      - persist_to_workspace:
+          root: ~/<< parameters.project >>
+          paths: .
+
 workflows:
   version: 2
+
   ci:
     jobs:
       - lint:
-          project: parcel-browse-everything
           ruby_version: 2.7.7
+      - build:
+          node-version: 'lts-browsers'
+      - test:
+          requires:
+            - build
+          node-version: 'lts-browsers'
 
   nightly:
     triggers:
@@ -45,7 +108,13 @@ workflows:
             branches:
               only:
                 - main
+
     jobs:
       - lint:
-          project: parcel-browse-everything
           ruby_version: 2.7.7
+      - build:
+          node-version: 'lts-browsers'
+      - test:
+          requires:
+            - build
+          node-version: 'lts-browsers'
