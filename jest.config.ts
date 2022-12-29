@@ -1,7 +1,7 @@
-import type {Config} from 'jest';
+import type { Config } from "jest";
 
 const config: Config = {
-  moduleDirectories: ['node_modules', 'dist'],
+  moduleDirectories: ["node_modules", "dist"],
 };
 
 export default config;

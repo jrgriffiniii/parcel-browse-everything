@@ -1,5 +1,4 @@
-BrowseEverything (in Parcel)
-=================================
+# BrowseEverything (in Parcel)
 
 ![npm](https://img.shields.io/npm/0.0.1/browse-everything)
 [![Build Status](https://circleci.com/gh/jrgriffiniii/parcel-browse-everything.svg?style=svg)](https://circleci.com/gh/samvera/parcel-browse-everything)
@@ -7,6 +6,7 @@ BrowseEverything (in Parcel)
 [![Apache 2.0 License](https://img.shields.io/badge/apache2-license-blue.svg)](./LICENSE)
 
 ## Community Support
+
 [![Samvera Community Slack](https://img.shields.io/badge/samvera-slack-blueviolet)](http://slack.samvera.org/)
 
 # Overview
@@ -43,16 +43,16 @@ BrowseEverything is available under [the Apache 2.0 license](LICENSE).
 
 ## Releasing
 
-*To be drafted*
+_To be drafted_
 
 ## Contributing
 
 If you're working on a PR for this project, create a feature branch off of `main`.
 
-This repository follows the [Samvera Community Code of Conduct](https://samvera.atlassian.net/wiki/spaces/samvera/pages/405212316/Code+of+Conduct) and [language recommendations](https://github.com/samvera/maintenance/blob/main/templates/CONTRIBUTING.md#language).  Please ***do not*** create a branch called `master` for this repository or as part of your pull request; the branch will either need to be removed or renamed before it can be considered for inclusion in the code base and history of this repository.
+This repository follows the [Samvera Community Code of Conduct](https://samvera.atlassian.net/wiki/spaces/samvera/pages/405212316/Code+of+Conduct) and [language recommendations](https://github.com/samvera/maintenance/blob/main/templates/CONTRIBUTING.md#language). Please **_do not_** create a branch called `master` for this repository or as part of your pull request; the branch will either need to be removed or renamed before it can be considered for inclusion in the code base and history of this repository.
 
 ## Acknowledgments
 
-This software has been developed by and is brought to you by the Samvera community.  Learn more at the [Samvera Community website](https://samvera.org/).
+This software has been developed by and is brought to you by the Samvera community. Learn more at the [Samvera Community website](https://samvera.org/).
 
 ![Samvera Logo](https://samvera.atlassian.net/wiki/download/attachments/1918631965/samvera-fall-TM-220w.png?api=v2)
