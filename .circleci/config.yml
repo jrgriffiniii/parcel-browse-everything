@@ -1,0 +1,46 @@
+version: 2.1
+
+orbs:
+  samvera: samvera/circleci-orb@1.0
+
+jobs:
+  lint:
+    parameters:
+      project:
+        type: string
+
+    executor:
+      name: 'samvera/ruby'
+
+    steps:
+      - checkout
+
+      - run:
+          name: Check for 'master' branch
+          command: |
+            git fetch --all --quiet --prune --prune-tags
+            if [[ -n "$(git branch --all --list master */master)" ]]; then
+                echo "A branch named 'master' was found. Please remove it."
+                echo "$(git branch --all --list master */master)"
+            fi
+            [[ -z "$(git branch --all --list master */master)" ]]
+      - samvera/cached_checkout
+
+workflows:
+  version: 2
+  ci:
+    jobs:
+      - lint:
+          project: parcel-browse-everything
+
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - main
+    jobs:
+      - lint:
+          project: parcel-browse-everything
