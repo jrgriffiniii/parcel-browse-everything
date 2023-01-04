@@ -1,7 +1,7 @@
-# BrowseEverything (in Parcel)
+# BrowseEverything (in [Parcel](https://parceljs.org/))
 
 ![npm](https://img.shields.io/npm/0.0.1/browse-everything)
-[![Build Status](https://circleci.com/gh/jrgriffiniii/parcel-browse-everything.svg?style=svg)](https://circleci.com/gh/samvera/parcel-browse-everything)
+[![Build Status](https://circleci.com/gh/jrgriffiniii/parcel-browse-everything.svg?style=svg)](https://circleci.com/gh/jrgriffiniii/parcel-browse-everything)
 [![Contribution Guidelines](https://img.shields.io/badge/contributing-guidelines-blue.svg)](./CONTRIBUTING.md)
 [![Apache 2.0 License](https://img.shields.io/badge/apache2-license-blue.svg)](./LICENSE)
 
@@ -29,10 +29,36 @@ Additionally, new adopters and potential adopters may find the pages here useful
 
 Further questions? [Get in touch](https://samvera.atlassian.net/wiki/spaces/samvera/pages/405211682/Getting+Started+in+the+Samvera+Community)
 
-## Building the Package
+## Development
+
+### Building the Package
 
 ```bash
 $ yarn build
+```
+
+### Viewing and Debugging the Package in the Browser
+
+```bash
+$ yarn parcel
+```
+
+### Linting the Code Base (using ESLint)
+
+```bash
+$ yarn lint
+```
+
+### Formatting the Code Base (using Prettier)
+
+```bash
+$ yarn format
+```
+
+### Executing the Test Suites (using Jest)
+
+```bash
+$ yarn test
 ```
 
 The JavaScript package should now be built within the directory `dist/main.js`.
