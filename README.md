@@ -67,9 +67,46 @@ The JavaScript package should now be built within the directory `dist/main.js`.
 
 BrowseEverything is available under [the Apache 2.0 license](LICENSE).
 
-## Releasing
+## Publishing
 
-_To be drafted_
+### Testing Locally Using [verdaccio](https://verdaccio.org/)
+
+Using `npm`:
+
+```bash
+$ npx verdaccio
+$ npm login --scope my-company --registry http://localhost:4873/
+# Then, within another terminal
+$ npm set registry http://localhost:4873/ --location project
+# Please ensure that the "version" property in package.json has been incremented to the next release version
+$ npm publish
+```
+
+Using `yarn`:
+
+```bash
+$ yarn verdaccio
+$ npm login --scope my-company --registry http://localhost:4873/
+# Then, within another terminal
+$ yarn publish --registry http://localhost:4873/ --patch
+```
+
+### Publishing Releases to [npm](https://www.npmjs.com/)
+
+Using `npm`:
+
+```bash
+$ npm login
+# Please ensure that the "version" property in package.json has been incremented to the next release version
+$ npm publish
+```
+
+Using `yarn`:
+
+```bash
+$ yarn login
+$ yarn publish --patch
+```
 
 ## Contributing
 
