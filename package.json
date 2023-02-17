@@ -2,16 +2,35 @@
   "name": "parcel-browse-everything",
   "version": "0.0.1",
   "author": "jrgriffiniii <1443986+jrgriffiniii@users.noreply.github.com>",
-  "description": "",
+  "description": "BrowseEverything is a JavaScript file upload library intended for integration into Ruby on Rails applications implemented using the Samvera digital repository framework.",
   "source": "src/index.ts",
   "main": "dist/main.js",
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
-  "prettier": "eslint-config-prettier",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jrgriffiniii/parcel-browse-everything.git"
+    "url": "git://github.com/samvera-labs/parcel-browse-everything.git"
   },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://github.com/samvera-labs/parcel-browse-everything/blob/main/LICENSE"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "cloud",
+    "files",
+    "repository",
+    "samvera",
+    "storage",
+    "upload"
+  ],
+  "bugs": {
+    "url": "http://github.com/samvera-labs/parcel-browse-everything/issues"
+  },
+  "homepage": "http://github.com/samvera-labs/parcel-browse-everything",
+  "prettier": "eslint-config-prettier",
   "scripts": {
     "build": "parcel build",
     "format": "prettier --write .",

@@ -1,7 +1,7 @@
 # BrowseEverything (in [Parcel](https://parceljs.org/))
 
 ![npm](https://img.shields.io/npm/0.0.1/browse-everything)
-[![Build Status](https://circleci.com/gh/jrgriffiniii/parcel-browse-everything.svg?style=svg)](https://circleci.com/gh/jrgriffiniii/parcel-browse-everything)
+[![Build Status](https://circleci.com/gh/samvera-labs/parcel-browse-everything.svg?style=svg)](https://circleci.com/gh/samvera-labs/parcel-browse-everything)
 [![Contribution Guidelines](https://img.shields.io/badge/contributing-guidelines-blue.svg)](./CONTRIBUTING.md)
 [![Apache 2.0 License](https://img.shields.io/badge/apache2-license-blue.svg)](./LICENSE)
 
